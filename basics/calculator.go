@@ -22,10 +22,10 @@ func parseNumber(input string) (float64, error) {
 	return number, nil
 }
 
-// 验证运算符是否合法
-func isValidOperator(op string) bool {
-	return op == "+" || op == "-" || op == "*" || op == "/"
-}
+//// 验证运算符是否合法
+//func isValidOperator(op string) bool {
+//	return op == "+" || op == "-" || op == "*" || op == "/"
+//}
 
 // 计算函数
 func calculate(num1, num2 float64, op string) (float64, error) {
@@ -73,10 +73,6 @@ func main() {
 
 		// 检查运算符是否在中间
 		op := parts[1]
-		if !isValidOperator(op) {
-			fmt.Println("输入格式错误，请使用：数字 运算符 数字，例如：3 + 5")
-			continue
-		}
 
 		// 检查数字是否有效
 		num1, err1 := parseNumber(parts[0])
